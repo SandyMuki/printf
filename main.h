@@ -1,6 +1,7 @@
-#ifndef MAIN_H
-#define MAIn_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 #include <stdio.h>
 
 int _printf(const char *format, ...);
-void print_integers(int num1, int num2);
+
+#endif
