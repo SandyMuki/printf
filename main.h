@@ -6,6 +6,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_int(long int intv);
 int _puts(char *s);
+void _nullhandler(const char *format);
 
 
 #endif
