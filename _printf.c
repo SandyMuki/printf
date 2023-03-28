@@ -36,9 +36,9 @@ int _printf(const char *format, ...)
 					count += print_int((long int)va_arg(arg, int));
 					break;
 				default:
-					count += _putchar('%');
 					if (*format == '\0')
 						return (-1);
+					count += _putchar('%');
 					count += _putchar(*format);
 			}
 		}
