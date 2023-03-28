@@ -31,12 +31,7 @@ int _printf(const char *format, ...)
 				case '%':
 					count += _putchar(37);
 					break;
-				case 'd':
-				case 'i':
-					count += print_int(va_arg(arg, int));
-					break;
 				default:
-					count += _putchar('%');
 					count += _putchar(*format);
 			}
 		}
