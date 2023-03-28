@@ -10,6 +10,9 @@ int _puts(char *s)
 {
 	int counter = 0;
 
+	if (s == NULL)
+		s = "(null)";
+
 	while (*s++)
 	{
 		_putchar(*(s - 1));

@@ -7,10 +7,10 @@
  * Return: integer count
  */
 
-int print_int(int n)
+int print_int(long int n)
 {
 	int counter = 0;
-	int rev = 0;
+	long int rev = 0;
 
 	if (n < 0)
 	{
