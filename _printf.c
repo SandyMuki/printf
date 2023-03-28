@@ -7,15 +7,14 @@
  *
  * Return: count of input
  */
+
 int _printf(const char *format, ...)
 {
 	int count = 0;
 	va_list arg;
 
-	if (format == NULL)
-		return (-1);
 	va_start(arg, format);
-	while (*format != '\0')
+	while (format != NULL && *format != '\0')
 	{
 		if (*format == '%')
 		{
@@ -44,8 +43,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(*format);
-			count++;
+			count += _putchar(*format);
 		}
 		format++;
 	}
