@@ -9,14 +9,11 @@
  */
 int _printf(const char *format, ...)
 {
-
 	int count = 0;
-	char c, *s;
 	va_list arg;
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(arg, format);
 	while (*format != '\0')
 	{
@@ -26,18 +23,21 @@ int _printf(const char *format, ...)
 			switch (*format)
 			{
 				case 'c':
-					c = (char) va_arg(arg, int);
-					_putchar(c);
-					count++;
+					count += _putchar(va_arg(arg, int));
 					break;
 				case 's':
-					s = va_arg(arg, char *);
-					count += _puts(s);
+					count += _puts(va_arg(arg, char *));
 					break;
 				case '%':
-					_putchar(37);
-					count++;
+					count += _putchar(37);
 					break;
+				case 'd':
+				case 'i':
+					count += print_int(va_arg(arg, int));
+					break;
+				default:
+					count += _putchar('%');
+					count += _putchar(*format);
 			}
 		}
 		else
