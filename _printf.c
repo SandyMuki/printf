@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(arg);
-	return (count);
+	return (count - 1);
 }
 /**
  * print_int - print integer to stdout and count
